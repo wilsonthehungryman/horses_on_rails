@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  get "horses/show"
-  get "horses/search_results"
-  resources :breeds, only: [ :index, :show ]
+  resources :breeds, only: :show
+  resources :horses, only: :show do
+    collection do
+      get "search_results"
+    end
+  end
+
+  root to: "breeds#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
