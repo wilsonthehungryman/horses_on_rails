@@ -1,5 +1,6 @@
 Horse.destroy_all
 Breed.destroy_all
+AdminUser.destroy_all
 
 NUMBER_OF_BREEDS = 5
 HORSES_PER_BREED = 15
