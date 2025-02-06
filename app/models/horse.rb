@@ -1,6 +1,8 @@
 class Horse < ApplicationRecord
   belongs_to :breed
 
+  has_one_attached :image
+
   validates :name, :age, :number_of_legs, :top_speed, presence: true
   validates :age, :number_of_legs, numericality: { only_integer: true }
 
@@ -9,6 +11,6 @@ class Horse < ApplicationRecord
   end
 
   def self.ransackable_associations(auth_object = nil)
-    [ "breed" ]
+    [ "breed", "image" ]
   end
 end
