@@ -43,7 +43,6 @@ gem "faker"
 gem "rubocop"
 gem "activeadmin"
 gem "devise"
-gem "cssbundling-rails"
 gem "sass-rails"
 gem "pexels"
 
